@@ -14,13 +14,7 @@
             background-size: cover;
             text-align: center;
             font-family: "Great Vibes", cursive;
-            border: 8px solid #413620;
-            padding: 40px 20px;
-            box-shadow: 0 0 0 12px #e29f9f, 0 0 0 20px #3a2b18;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 40px 20px;
-            margin: 20px;
+            
         }
 
         #title {
@@ -83,11 +77,12 @@
         }
 
         #resetButton {
-            margin-top: 20px;
-            padding: 10px 20px;
+            margin: 20px auto;  
+            padding: 20px;
             border-radius: 10px;
             cursor: pointer;
             font-family: "Great Vibes", cursive;
+            display: inline-block;
         }
 
         button {
@@ -161,13 +156,27 @@
            font-size: 18px;
         }     
         html, body {
-           height: 100%;
-        }   
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          font-family: "Great Vibes", cursive;
+        }
+        
+        #mainContent {
+          background: rgba(248, 200, 200, 0.85);
+          border: 8px solid #413620;
+          padding: 40px;
+          margin: 20px auto;
+          max-width: 1200px;
+          background: transparent;
+          
+        }
 
     </style>
 </head>
 
 <body>
+    <div id="mainContent">.
 <h1 id="title">Month</h1>
 <h3 id="sub-title">Monthly Mood Tracker</h3>
 
@@ -208,7 +217,9 @@
     </div>
 </div>
 
+
 <button id="resetButton">Reset</button>
+</div>
 
 <div id="popupForm">
     <h2>Choose Mood</h2>
@@ -309,6 +320,7 @@ resetBtn.addEventListener("click", ()=>{
     <img src="mm8.png" alt="icon3" style="width:40px; height:40px;">
     <img src="mm9.png" alt="icon3" style="width:40px; height:40px;">
 </div>
+
 
 
   
