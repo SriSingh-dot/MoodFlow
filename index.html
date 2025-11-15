@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>MoodFlow</title>
     <link rel="icon" href="f1.png">
-    <link href="https://fonts.cdnfonts.com/css/romantic-party" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
         body{
             background-image:url("mm1.jpg");
-            background-color:#796d6d;
+            background-color:#c4a1a1;
             text-align:center;
-            font-family:"Romantic Party", sans-serif;
+            font-family: "Great Vibes", cursive;
+            border:5px solid #413620;
+            box-shadow: 0 0 0 6px #e29f9f, 0 0 0 12px #3a2b18;
+            margin:0;
+            padding:40px 20px;
         }
 
         #title{
             margin-top:90px;
+            font-size: 50px;
         }
 
         #sub-title{
@@ -28,7 +34,7 @@
         }
 
         #Cal-Div{
-            background:#977979;
+            background:#D7B8B8;
             border-radius:10px 10px 20px 20px;
             width:85%;
             margin:auto;
@@ -38,15 +44,16 @@
         #Cal-Head{
             display:flex;
             justify-content:space-between;
-            border:2px solid #242121;
+            border:2px solid #1f1313;
             padding:0 20px;
             font-size:20px;
-            background:#816f6f;
+            background:#A06666;
+            color:white;
         }
 
         #Cal-Content{
             padding:20px;
-            border:2px solid #302d2d;
+            border:2px solid #995858;
         }
 
         .days{
@@ -59,9 +66,13 @@
             margin:4px;
             padding:10px;
             border-radius:20px;
-            background:#5e5252;
+            background:#A06666;
             border:2px solid black;
             cursor:pointer;
+            position:relative;
+            color:white;
+            font-size:16px;
+            user-select:none;
         }
 
         #resetButton{
@@ -69,89 +80,184 @@
             padding:10px 20px;
             border-radius:10px;
             cursor:pointer;
+            font-family: "Great Vibes", cursive;
+        }
+
+        button {
+            font-family: "Great Vibes", cursive;
+        }
+
+        #popupForm {
+            display:none;
+            position:fixed;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            width:250px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.2);
+            text-align:center;
+            font-family:"Great Vibes", cursive;
+        }
+
+        .mood-btn {
+            padding:8px 12px;
+            margin:6px;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;
+            font-family:"Great Vibes", cursive;
+        }
+
+        .heart {
+            font-size:12px;
+            position:absolute;
+            top:-6px;
+            left:50%;
+            transform:translateX(-50%);
+            color:#d46a6a;
+            pointer-events:none;
+        }
+
+        #closeForm{
+            margin-top:10px;
+            cursor:pointer;
+            background:none;
+            border:none;
+            font-family:"Great Vibes", cursive;
         }
     </style>
 </head>
-
 <body>
 
-    <h1 id="title">Month</h1>
-    <h3 id="sub-title">Monthly Mood Tracker</h3>
+<h1 id="title">Month</h1>
+<h3 id="sub-title">Monthly Mood Tracker</h3>
 
-    <div id="Cal-Container">
-        <div id="Cal-Div">
-            <div id="Cal-Head">
-                <p id="hab-title">My Habit</p>
-                <p id="TotalDays">0/31</p>
-            </div>
+<div id="Cal-Container">
+    <div id="Cal-Div">
+        <div id="Cal-Head">
+            <p id="hab-title">My Mood</p>
+            <p id="TotalDays">0/31</p>
+        </div>
 
-            <div id="Cal-Content">
-                <div id="tracker">
-                    <div class="days">
-                        <div class="day">1</div><div class="day">2</div><div class="day">3</div>
-                        <div class="day">4</div><div class="day">5</div><div class="day">6</div>
-                        <div class="day">7</div>
-                    </div>
-
-                    <div class="days">
-                        <div class="day">8</div><div class="day">9</div><div class="day">10</div>
-                        <div class="day">11</div><div class="day">12</div><div class="day">13</div>
-                        <div class="day">14</div>
-                    </div>
-
-                    <div class="days">
-                        <div class="day">15</div><div class="day">16</div><div class="day">17</div>
-                        <div class="day">18</div><div class="day">19</div><div class="day">20</div>
-                        <div class="day">21</div>
-                    </div>
-
-                    <div class="days">
-                        <div class="day">22</div><div class="day">23</div><div class="day">24</div>
-                        <div class="day">25</div><div class="day">26</div><div class="day">27</div>
-                        <div class="day">28</div>
-                    </div>
-
-                    <div class="days">
-                        <div class="day">29</div><div class="day">30</div><div class="day">31</div>
-                    </div>
-
+        <div id="Cal-Content">
+            <div id="tracker">
+                <div class="days">
+                    <div class="day">1</div><div class="day">2</div><div class="day">3</div>
+                    <div class="day">4</div><div class="day">5</div><div class="day">6</div>
+                    <div class="day">7</div>
+                </div>
+                <div class="days">
+                    <div class="day">8</div><div class="day">9</div><div class="day">10</div>
+                    <div class="day">11</div><div class="day">12</div><div class="day">13</div>
+                    <div class="day">14</div>
+                </div>
+                <div class="days">
+                    <div class="day">15</div><div class="day">16</div><div class="day">17</div>
+                    <div class="day">18</div><div class="day">19</div><div class="day">20</div>
+                    <div class="day">21</div>
+                </div>
+                <div class="days">
+                    <div class="day">22</div><div class="day">23</div><div class="day">24</div>
+                    <div class="day">25</div><div class="day">26</div><div class="day">27</div>
+                    <div class="day">28</div>
+                </div>
+                <div class="days">
+                    <div class="day">29</div><div class="day">30</div><div class="day">31</div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <button id="resetButton">Reset</button>
+<button id="resetButton">Reset</button>
+<!--The mood colors-->
+<div id="popupForm">
+    <h2>Choose Mood</h2>
+    <button class="mood-btn" data-color="#FFB3BA">Happy</button>
+    <button class="mood-btn" data-color="#BAE1FF">Calm</button>
+    <button class="mood-btn" data-color="#FFDFBA">Romantic</button>
+    <button class="mood-btn" data-color="#FFFFBA">Tired</button>
+    <button class="mood-btn" data-color="#BFFCC6">Excited</button>
+    <button class="mood-btn" data-color="#D5BAFF">Relaxed</button>
+    <div><button id="closeForm">Close</button></div>
+</div>
+
+
 
 <script>
-    let allDays = document.querySelectorAll(".day");
-    let total = document.getElementById("TotalDays");
+let allDays = document.querySelectorAll(".day");
+let total = document.getElementById("TotalDays");
+let popup = document.getElementById("popupForm");
+let closeBtn = document.getElementById("closeForm");
+let moodBtns = document.querySelectorAll(".mood-btn");
+let resetBtn = document.getElementById("resetButton");
 
-    // this just keeps track lol
-    let count = 0;
+let savedMoods = JSON.parse(localStorage.getItem("moods")) || {};
+let currentDay = null;
+let count = 0;
 
-    allDays.forEach(d => {
-        d.addEventListener("click", () => {
-            if (!d.classList.contains("on")) {
-                d.classList.add("on");
-                d.style.backgroundColor = "#6daa6d";
-                count++;
-            } else {
-                d.classList.remove("on");
-                d.style.backgroundColor = "#5e5252";
-                count--;
-            }
-            total.textContent = count + "/31";
-        });
+function addHeart(day){
+    day.querySelectorAll(".heart").forEach(h=>h.remove());
+    let s = document.createElement("span");
+    s.className = "heart";
+    s.textContent = "❤";
+    day.appendChild(s);
+}
+
+allDays.forEach(d=>{
+    let n = d.textContent;
+    if(savedMoods[n]){
+        d.classList.add("on");
+        d.style.backgroundColor = savedMoods[n];
+        addHeart(d);
+        count++;
+    }
+});
+total.textContent = count + "/31";
+
+allDays.forEach(d=>{
+    d.addEventListener("click", ()=>{
+        currentDay = d;
+        popup.style.display = "block";
     });
+});
 
-    document.getElementById("resetButton").addEventListener("click", () => {
-        allDays.forEach(d => {
-            d.classList.remove("on");
-            d.style.backgroundColor = "#5e5252";
-        });
-        count = 0;
-        total.textContent = "0/31";
+moodBtns.forEach(b=>{
+    b.addEventListener("click", ()=>{
+        if(!currentDay) return;
+        let dayNum = currentDay.textContent;
+        let color = b.getAttribute("data-color");
+        savedMoods[dayNum] = color;
+        localStorage.setItem("moods", JSON.stringify(savedMoods));
+        if(!currentDay.classList.contains("on")) count++;
+        currentDay.classList.add("on");
+        currentDay.style.backgroundColor = color;
+        addHeart(currentDay);
+        total.textContent = count + "/31";
+        popup.style.display = "none";
+        currentDay = null;
     });
+});
+
+closeBtn.addEventListener("click", ()=>{
+    popup.style.display = "none";
+    currentDay = null;
+});
+
+resetBtn.addEventListener("click", ()=>{
+    allDays.forEach(d=>{
+        d.classList.remove("on");
+        d.style.backgroundColor = "#A06666";
+        d.querySelectorAll(".heart").forEach(h => h.remove());
+    });
+    savedMoods = {};
+    localStorage.setItem("moods", "{}");
+    count = 0;
+    total.textContent = "0/31";
+});
 </script>
 
 </body>
