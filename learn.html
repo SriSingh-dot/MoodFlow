@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn</title>
+    <link rel="icon" href="f1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("mm1.jpg");
+            background-color: #c4a1a1;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            font-family: "Great Vibes", cursive;
+            margin: 0;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        #title {
+            margin-top: 60px;
+            font-size: 70px;
+            color: #6B2E2E;
+            text-shadow: 2px 2px 4px #e29f9f;
+        }
+
+        .contentBox {
+            background: #D7B8B8;
+            border-radius: 15px;
+            border: 3px solid #995858;
+            width: 80%;
+            margin: 20px auto;
+            padding: 25px 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: left;
+            font-size: 30px;
+            line-height: 1.6;
+            color: #6B2E2E;
+        }
+
+         #footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            border: 5px solid #3a2b18;
+            background-color: #F0D9D9;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        #noteButton {
+           padding: 10px 25px;
+           border-radius: 12px;
+           border: 2px solid #3a2b18;
+           cursor: pointer;
+           font-family: "Great Vibes", cursive;
+           background-color: #FFB3BA;
+           color: #6B2E2E;
+           font-size: 18px;
+        } 
+         .contentContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contentBox {
+            flex: 0 0 45%; 
+        }
+
+        @media (max-width: 800px) {
+            .contentBox {
+                flex: 0 0 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="title">MoodFlow</h1>
+
+<div class="contentContainer">
+    <div class="contentBox">
+        All the dates are in boxes — click one and a popup lets you pick your mood. Your mood 
+        <img src="mm10.png" alt="Mood 1" style="width:30px; height:30px; margin:0 5px;">
+        <img src="mm11.png" alt="Mood 2" style="width:30px; height:30px; margin:0 5px;">
+        <img src="mm12.png" alt="Mood 3" style="width:30px; height:30px; margin:0 5px;">
+        . The box lights up in the color of your mood. Down in the footer, there’s a Note button where you can jot down your thoughts for the whole month. Hit Save and your notes are safely stored!
+    </div>
+</div>
+
+
+<div id="footer" style="display:flex; align-items:center; justify-content:center; gap:20px;">
+    <img src="mm2.png" alt="icon2" style="width:40px; height:40px;">
+    <img src="mm3.png" alt="icon3" style="width:40px; height:40px;">
+    <img src="mm6.png" alt="icon3" style="width:40px; height:40px;">
+    <img src="mm7.png" alt="icon3" style="width:40px; height:40px;">
+    
+    <button id="noteButton" onclick="window.location.href='note.html'">Note</button>
+    <button id="noteButton" onclick="window.location.href='index.html'">Tracker</button>
+    
+    <img src="mm4.png" alt="icon4" style="width:40px; height:40px;">
+    <img src="mm5.png" alt="icon5" style="width:40px; height:40px;">
+    <img src="mm8.png" alt="icon3" style="width:40px; height:40px;">
+    <img src="mm9.png" alt="icon3" style="width:40px; height:40px;">
+</div>
+
+</body>
+</html>
