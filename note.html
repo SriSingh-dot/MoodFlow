@@ -2,174 +2,228 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Note</title>
+    <title>MoodFlow</title>
+    <link rel="icon" href="f1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+body {
+    background-image: url("mm1.jpg");
+    background-color: #c4a1a1;
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    margin: 0;
+    padding: 40px 20px;
+}
+h1 {
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: #6B2E2E;
+}
+form {
+    margin: 10px 0;
+}
+input[type="text"] {
+    padding: 10px 18px;
+    width: 1200px;
+    border-radius: 8px;
+    border: 2px solid #A06666;
+    font-family: "Great Vibes", cursive;
+    font-size: 18px;
+}
+label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #A06666;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 10px;
+}
+#resetNote, #saveNote {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    font-family: "Great Vibes", cursive;
+    cursor: pointer;
+    background-color: #D7B8B8;
+    color: #6B2E2E;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+#resetNote:hover, #saveNote:hover {
+    background-color: #CFAFAF;
+}
+</style>
+
 </head>
 <body>
 
-    <h1>Note</h1>
+<h1>Write About Your Day</h1>
 
-    <form id="noteForm">
+<div id="noteContainer">
+    <form>
         <label for="date1">1st:</label>
         <input type="text" id="date1" name="date1" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">2nd:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date2">2nd:</label>
+        <input type="text" id="date2" name="date2" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">3rd:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date3">3rd:</label>
+        <input type="text" id="date3" name="date3" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">4th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date4">4th:</label>
+        <input type="text" id="date4" name="date4" placeholder="Write your note here">
     </form>
-
-
-    <form id="noteForm">
-        <label for="date1">5th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date5">5th:</label>
+        <input type="text" id="date5" name="date5" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">6th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date6">6th:</label>
+        <input type="text" id="date6" name="date6" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">7th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date7">7th:</label>
+        <input type="text" id="date7" name="date7" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">8th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date8">8th:</label>
+        <input type="text" id="date8" name="date8" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">9th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date9">9th:</label>
+        <input type="text" id="date9" name="date9" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">10th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date10">10th:</label>
+        <input type="text" id="date10" name="date10" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">11th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date11">11th:</label>
+        <input type="text" id="date11" name="date11" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">12th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date12">12th:</label>
+        <input type="text" id="date12" name="date12" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">13th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date13">13th:</label>
+        <input type="text" id="date13" name="date13" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">14th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date14">14th:</label>
+        <input type="text" id="date14" name="date14" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">15th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date15">15th:</label>
+        <input type="text" id="date15" name="date15" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">16th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date16">16th:</label>
+        <input type="text" id="date16" name="date16" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">17th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date17">17th:</label>
+        <input type="text" id="date17" name="date17" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">18th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date18">18th:</label>
+        <input type="text" id="date18" name="date18" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">19th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date19">19th:</label>
+        <input type="text" id="date19" name="date19" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">20th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date20">20th:</label>
+        <input type="text" id="date20" name="date20" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">21st:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date21">21st:</label>
+        <input type="text" id="date21" name="date21" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">22nd:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date22">22nd:</label>
+        <input type="text" id="date22" name="date22" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">23rd:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date23">23rd:</label>
+        <input type="text" id="date23" name="date23" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">24th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date24">24th:</label>
+        <input type="text" id="date24" name="date24" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">25th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date25">25th:</label>
+        <input type="text" id="date25" name="date25" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">26th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date26">26th:</label>
+        <input type="text" id="date26" name="date26" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">27th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date27">27th:</label>
+        <input type="text" id="date27" name="date27" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">28th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date28">28th:</label>
+        <input type="text" id="date28" name="date28" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">29th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date29">29th:</label>
+        <input type="text" id="date29" name="date29" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">30th:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date30">30th:</label>
+        <input type="text" id="date30" name="date30" placeholder="Write your note here">
     </form>
-
-    <form id="noteForm">
-        <label for="date1">31st:</label>
-        <input type="text" id="date1" name="date1" placeholder="Write your note here">
+    <form>
+        <label for="date31">31st:</label>
+        <input type="text" id="date31" name="date31" placeholder="Write your note here">
     </form>
+</div>
+
+<button id="resetNote">Reset</button>
+<button id="saveNote">Save</button>
+
+
+<script>
+const noteInputs = document.querySelectorAll('input[type="text"]');
+const resetBtn = document.getElementById('resetNote');
+const saveBtn = document.getElementById('saveNote');
+
+noteInputs.forEach(input => {
+    const saved = localStorage.getItem(input.id);
+    if (saved) input.value = saved;
+});
+
+saveBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    noteInputs.forEach(input => {
+        localStorage.setItem(input.id, input.value);
+    });
+});
+
+resetBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    noteInputs.forEach(input => {
+        input.value = '';
+        localStorage.removeItem(input.id);
+    });
+});
+</script>
 
 
 
-      <button id="resetNote">Reset</button>
 
-      <script>
-
-      </script>
 </body>
 </html>
+
