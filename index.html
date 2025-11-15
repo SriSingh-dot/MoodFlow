@@ -7,79 +7,79 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
-        body{
-            background-image:url("mm1.jpg");
-            background-color:#c4a1a1;
-            text-align:center;
+        body {
+            background-image: url("mm1.jpg");
+            background-color: #c4a1a1;
+            text-align: center;
             font-family: "Great Vibes", cursive;
-            border:5px solid #413620;
+            border: 5px solid #413620;
             box-shadow: 0 0 0 6px #e29f9f, 0 0 0 12px #3a2b18;
-            margin:0;
-            padding:40px 20px;
+            margin: 0;
+            padding: 40px 20px;
         }
 
-        #title{
-            margin-top:90px;
+        #title {
+            margin-top: 90px;
             font-size: 50px;
         }
 
-        #sub-title{
-            opacity:.7;
-            font-size:18px;
+        #sub-title {
+            opacity: 0.7;
+            font-size: 18px;
         }
 
-        #Cal-Container{
-            display:flex;
-            justify-content:end;
+        #Cal-Container {
+            display: flex;
+            justify-content: end;
         }
 
-        #Cal-Div{
-            background:#D7B8B8;
-            border-radius:10px 10px 20px 20px;
-            width:85%;
-            margin:auto;
-            text-align:center;
+        #Cal-Div {
+            background: #D7B8B8;
+            border-radius: 10px 10px 20px 20px;
+            width: 85%;
+            margin: auto;
+            text-align: center;
         }
 
-        #Cal-Head{
-            display:flex;
-            justify-content:space-between;
-            border:2px solid #1f1313;
-            padding:0 20px;
-            font-size:20px;
-            background:#A06666;
-            color:white;
+        #Cal-Head {
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid #1f1313;
+            padding: 0 20px;
+            font-size: 20px;
+            background: #A06666;
+            color: white;
         }
 
-        #Cal-Content{
-            padding:20px;
-            border:2px solid #995858;
+        #Cal-Content {
+            padding: 20px;
+            border: 2px solid #995858;
         }
 
-        .days{
-            display:flex;
-            justify-content:center;
+        .days {
+            display: flex;
+            justify-content: center;
         }
 
-        .day{
-            width:30px;
-            margin:4px;
-            padding:10px;
-            border-radius:20px;
-            background:#A06666;
-            border:2px solid black;
-            cursor:pointer;
-            position:relative;
-            color:white;
-            font-size:16px;
-            user-select:none;
+        .day {
+            width: 30px;
+            margin: 4px;
+            padding: 10px;
+            border-radius: 20px;
+            background: #A06666;
+            border: 2px solid black;
+            cursor: pointer;
+            position: relative;
+            color: white;
+            font-size: 16px;
+            user-select: none;
         }
 
-        #resetButton{
-            margin-top:20px;
-            padding:10px 20px;
-            border-radius:10px;
-            cursor:pointer;
+        #resetButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
             font-family: "Great Vibes", cursive;
         }
 
@@ -88,50 +88,77 @@
         }
 
         #popupForm {
-            display:none;
-            position:fixed;
-            top:50%;
-            left:50%;
-            transform:translate(-50%,-50%);
-            background:white;
-            padding:20px;
-            border-radius:10px;
-            width:250px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.2);
-            text-align:center;
-            font-family:"Great Vibes", cursive;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #F8C8C8;
+            padding: 25px 20px;
+            border-radius: 15px;
+            width: 260px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-family: "Great Vibes", cursive;
+            border: 2px solid #C85C5C;
+            color: #6B2E2E;
         }
 
         .mood-btn {
-            padding:8px 12px;
-            margin:6px;
-            border:none;
-            border-radius:10px;
-            cursor:pointer;
-            font-family:"Great Vibes", cursive;
+            padding: 8px 12px;
+            margin: 6px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: "Great Vibes", cursive;
+            color: rgb(58, 42, 42);
         }
 
         .heart {
-            font-size:12px;
-            position:absolute;
-            top:-6px;
-            left:50%;
-            transform:translateX(-50%);
-            color:#d46a6a;
-            pointer-events:none;
+            font-size: 12px;
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #d45656;
+            pointer-events: none;
         }
 
-        #closeForm{
-            margin-top:10px;
-            cursor:pointer;
-            background:none;
-            border:none;
-            font-family:"Great Vibes", cursive;
+        #closeForm {
+            margin-top: 10px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-family: "Great Vibes", cursive;
+            color: #C85C5C;
         }
+
+        #footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #3a2b18;
+    background-color: #F0D9D9;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#noteButton {
+    padding: 10px 25px;
+    border-radius: 12px;
+    border: 2px solid #3a2b18;
+    cursor: pointer;
+    font-family: "Great Vibes", cursive;
+    background-color: #FFB3BA;
+    color: #6B2E2E;
+    font-size: 18px;
+}
+
+
     </style>
 </head>
-<body>
 
+<body>
 <h1 id="title">Month</h1>
 <h3 id="sub-title">Monthly Mood Tracker</h3>
 
@@ -173,7 +200,7 @@
 </div>
 
 <button id="resetButton">Reset</button>
-<!--The mood colors-->
+
 <div id="popupForm">
     <h2>Choose Mood</h2>
     <button class="mood-btn" data-color="#FFB3BA">Happy</button>
@@ -184,8 +211,6 @@
     <button class="mood-btn" data-color="#D5BAFF">Relaxed</button>
     <div><button id="closeForm">Close</button></div>
 </div>
-
-
 
 <script>
 let allDays = document.querySelectorAll(".day");
@@ -259,6 +284,14 @@ resetBtn.addEventListener("click", ()=>{
     total.textContent = "0/31";
 });
 </script>
+
+
+<div id="footer">
+    <button id="noteButton" onclick="window.location.href='note.html'">Note</button>
+</div>
+
+  
+
 
 </body>
 </html>
